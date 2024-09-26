@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "mill-homekit-bridge"
+version = "0.1.0"
+description = "Connect your Mill heaters to your Apple Home"
+authors = ["Sigurd Ljødal <544451+ljodal@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+	{include = "mill_homekit_bridge.py"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+HAP-python = "^4.9.1"
+httpx = "^0.27.2"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.11.2"
+ruff = "^0.6.8"
+ipython = "^8.27.0"
+
+
+[tool.poetry.group.lsp.dependencies]
+python-lsp-server = "^1.12.0"
+pylsp-mypy = "^0.6.9"
+python-lsp-ruff = "^2.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+strict = true
